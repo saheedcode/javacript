@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+  
+
+
+
+
+  <button type="button" Onclick="document.getElementById('demo').innerHTML=
+  Date()">click to see today's Date </button>
+ 
+    
+     <p id="demo"></p>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+/*
+  let firstName = "Adewale"
+
+  firstName = "ojo"
+  console.log(firstName)
+
+
+  //camel
+  const first_name = "my first name"
+  
+//pascal
+const firstName = "my name"
+
+//snake case 
+const firstname = "my name"
+
+
+// a string
+let bestFriend = "olawale"
+bestFriend = 'kolawole'
+bestFriend = `saheed`
+bestFriend =  `my best friend is ${bestFriend}`
+console.log(bestFriend)
+
+//undefine
+let tenant;
+console.log(tenant)
+
+//Boolean
+const isMarried = false
+const isSingle = true 
+
+console.log(isMarried, isSingle)
+
+
+
+let tenant;
+if(isMarried){
+  tenant = "atomide"
+}else{
+  tenant = 'osb'
+}
+
+
+let tenant2 = null
+console.log  (tenant2, typeof(tenant2))
+*/
+
+//a. object 
+const userInfo = {
+  firstName: "Oso",
+  lastName: 'ogbon',
+  middleName: 'sodiq',
+  age: 50,
+  dob: 1970,
+  isMarried: false,
+  gender:"male",
+  school: "futa",
+  interest:null,
+}
+
+console.log(userInfo)
+
+
+//b. Array
+const users = [
+  userInfo, 30, 50, 100, "ojo", "sodiq", "isMarried", "isSingle"  
+]
+
+console.log (users, typeof(users))
+
+
+
+//c. date 
+const today = new Date()
+console.log(today)
+
+const totalAmount = 5000 + Number('3000')
+console.log(totalAmount)
+
+const balance = 5000 + "30"
+console.log(balance)
+
+const balance3 = 5000 + parseInt('6000')
+console.log(balance, balance3)
+
+const balance4 = 5000 + true
+
+console.log(balance4)
+
+const balance5 = 5000 * '5'
+console.log(balance5)
+
+
+const balance6 = 1000
+const balance7 = '1000'
+
+const checkBalance = balance6 == balance7
+console.log(checkBalance)
+
+const checkBalance1 = balance6 === balance7
+console.log(checkBalance1)
+
+
+const userBalance = {
+  exchangeRate: '50'
+}
+
+const rate = userBalance.exchangeRate
+
+console.log(rate === 50)
+console.log(rate == 50)
+console.log(Number(rate) === 50)
+
+
+const amount2 = 20 % 3
+console.log(amount2)
+
+//exponential
+const myNumber = 10
+const y = myNumber ** 3
+
+console.log (y)
+
+const amount3 = 20 % 2
+console.log(amount3)
+
+
+
+
+/*
+//assignment operator
+// 1. = operator
+const myName = "ebenezer"
+
+// += 
+let balance8 = 2000
+ balance3 = 3000
+
+balance8 += 4000
+console.log(balance8)
+*/
+
+//3 -= operator
+let balance50 = 15000
+balance50 -= 2500
+console.log(balance50)
+
+//4 *= operator
+let balance23 = 2000
+balance23 **= 3
+console.log(balance23)
+
+
+//5 /= operator
+let balance24 = 2000
+balance24 /= 3
+console.log(balance24)
+
+/*
+// modulus operator %
+let balnnce60 = 2000
+balance60 %= 3
+console.log(balance60)
+
+//comparison
+// 1. less than < 
+
+const ojoMoney = 2000
+const adeMoney = 3000
+
+const result = adeMoney < ojoMoney
+
+
+console.log(result)
+
+console.log(adeMoney >= ojoMoney)
+console.log(adeMoney <= ojoMoney)
+
+const saheedMoney = 5000
+const ayMoney = '5000'
+
+console.log(saheedMoney == ayMoney)
+console.log(saheedMoney === ayMoney)
+
+
+logical operator 
+let xxx = 5
+let yyy = 8
+
+let z = xxx < 10 && yyy > 10
+console.log(z, "the z answer")
+
+//!! or 
+z = xxx < 10 !! yyy > 10
+console.log(z, "the z answer")
+
+//3 !not 
+let www = 5
+let uuu = '5'
+y= xxx < 10 !! yyy > 10
+console.log(y, "the z answer")
+
+
+
+
+*/
+
+
+
+
+
+//logical operator 
+let xxx = 5
+let yyy = 8
+// && and 
+let z = xxx < 10 && yyy > 10
+console.log(z, "the z answer")
+
+//!! or 
+z = xxx < 10 || yyy > 10
+console.log(z, "the z answer")
+//!! or 
+z = xxx < 10 || yyy > 10
+console.log(z, "the z answer")
+
+
+//3 ! not 
+let www = 5 
+let uuu = '5'
+z = !(www == uuu)
+console.log(z, "the z answer")
+
+//ternary  / condition
+
+// 1. ? Question operator
+let saheedAge = 10
+let resultAge = saheedAge > 30 ? "adult" : "senior man"
+console.log(resultAge)
+
+//2. switch and case 
+let paymentMethod = 'paypal'
+
+switch (paymentMethod){
+  case 'wallet':
+ 
+  console.log("I enter wallet oooo")       
+  break;
+  case 'bank':
+  
+   console.log("i enter bank ooo")
+
+  break;
+  case 'paypal':
+   console.log("i enter paypal oo")
+  default:
+  console.log("nothing deyy alaye .enter better value")
+
+
+}
+
+//3 if statement
+let userAge = 50
+if(userAge > 30){
+  console.log(`you are Arugbo ojo. you are ${userAge}`)
+}
+
+//4  else if statement 
+if (userAge > 50){
+  console.log(`you are Arugbo ojo. you are ${userAge}`)
+}else if(userAge >= 20){
+  console.log(`you are young. you are ${userAge}`)
+
+}else if( userAge != 30){
+  console.log("you are young. you are ${userAge}") 
+}
+else {
+  console.log("alaye dont disturb") 
+}
+
+
+//if/else statement
+
+if (userAge > 1000){
+  console.log(`you are young. you are ${userAge}`)
+}else {
+  console.log("Alaye dont disturb me")
+}
+
+//functions
+// 1. Using the function key word
+
+//first way
+function myLove (loveName, age) {
+
+console.log("My love is not at home")
+
+console.log(`the name of my love is  ${loveName}, she is ${age}`)
+
+}
+
+myLove('pelebe', 50)
+myLove('yosibi', 150)
+myLove('kachukwu', 150)
+
+//second way
+const getMylove = () => {
+
+}
+
+
+const getSum = (a, b) => {
+  const result = a + b - b * a / 10
+  console.log(result, "THE RESULT IS HERE")
+
+}
+
+getSum(20, 10)
+getSum(2, 3)
+
+//const mee = 50
+//if (mee )
+
+const userDetails = userInfo => {
+  console.log(userInfo, "The user Info pass")
+}
+
+userDetails(
+  {
+    firstName: "sodiq",
+    lastName: 'Ogbon'
+  }
+)
+
+
+
+
+</script>
+
+
+
+<script src="index.js"></script>
+</body>
+</html>
