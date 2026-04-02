@@ -1,0 +1,728 @@
+// alert("javascript external guy")
+
+//variables
+// const = constant
+//let
+//var -  variable
+
+let firstName = 'Adewale'
+const lastName = 'Seun Osb'
+
+var age = 20
+
+age = 100
+
+firstName = 'Temidayo'
+
+
+
+
+
+console.log(firstName)
+console.log(lastName)
+console.log(age)
+
+// DATA TYPES
+// 1. primitive Data Types (immutables)
+// 2. Non-Primitive Data Types 
+
+//PRIMITIVE DATA TYPES
+// 1. NUMBERS
+//a. Number
+const age2 = 10
+const year = 2025
+const length = 7.5
+const amount = 20000
+//b. BIG Integer
+const x =12345678n
+const xx = BigInt(123456789)
+
+// 2. NON - NUMBERS
+
+//a. String
+let bestFriend = 'Ayomide'
+bestFriend = "Tayo"
+bestFriend = `My Best Friend is ${bestFriend}`
+console.log(bestFriend)
+
+//b. BOOLEAN
+// TRUE/FALSE
+const isMarried = false
+const isSingle = true
+
+console.log(isMarried, isSingle)
+
+//c. Undefined
+let tennantName;
+if(isMarried){
+    tennantName = 'Ayomide'
+}else {
+    tennantName = 'OSB'
+}
+console.log(tennantName, typeof(tennantName))
+tennantName = 'Ayomide'
+console.log(tennantName, typeof(tennantName))
+
+//d. null
+let tenant2 = null
+console.log(tenant2, typeof(tenant2))
+
+//e. Symbol
+const mySymbol = Symbol(20)
+console.log(mySymbol, typeof(mySymbol))
+
+//NON - PRIMITIVE DATA TYPES
+//a. objects
+const userInfo = {
+    firstName: "OSB",
+    lastName: 'Ogbon',
+    middleName: 'Sodiq',
+    age: 50,
+    dob: 1970,
+    isMarried: false,
+    gender: "male",
+    school: "FUTA",
+    interest: null
+
+}
+
+console.log(userInfo, typeof(userInfo))
+//b. ARRAY
+
+const users = [
+    userInfo, 30, 50, 100, "ojo", "sodiq", isMarried, isSingle
+]
+console.log(users, typeof(userInfo))
+
+//c. dates
+const today = new Date()
+console.log(today)
+
+const totalAmount = 50 + 'hundrend'
+console.log(totalAmount)
+
+const balance = 5000 + 3000
+console.log(balance)
+
+const balance2 = 5000 + Number ('3000')
+const balance3 = 5000 + parseInt ('6000')
+console.log(balance2, balance3)
+
+
+const balance4 = 5000 + true
+console.log(balance4)
+
+const balance5 = 5000 * '5'
+console.log(balance5)
+
+const balance6 = 1000
+const balance7 = '1000'
+
+const checkBalance = balance6 == balance7
+console.log(checkBalance)
+
+const checkBalance2 = balance6 === balance7
+console.log(checkBalance2)
+
+const balance10 = String(3000) + Number('4000')
+console.log(balance10)
+
+const theConvert = String(false)
+console.log(theConvert, typeof(theConvert))
+
+const userBalance = {
+    exchangeRate: '50'
+}
+
+const rate = userBalance.exchangeRate
+
+console.log(rate === 50)
+console.log(rate == 50)
+console.log(Number(rate) === 50)
+
+// OPERATORS
+// ARITHMETIC
+// a. Addition
+const amount1 = 2000 + 10000
+
+const amount2 = 4000 * 2
+
+const amount3 = 8000 / 3
+
+//MODULUS
+const amount4 = 20 % 2
+console.log(amount4, 'amount4')
+
+const amount5 = 20 % 3
+console.log(amount5, 'amount5')
+
+const amount6 = 20 % 7
+console.log(amount6, 'amount6')
+
+//Exponential
+const myNumber = 10
+const y = myNumber ** 3
+console.log(y)
+
+
+
+// ASSIGNMENTS
+//1. Operator
+const myName = 'ebenezer'
+
+//2. +=
+let balance1 = 2000
+const balance9 = 3000
+
+balance1 +=4000
+
+let totalAmountValue = balance1 + balance9
+console.log(totalAmountValue)
+console.log(balance1)
+
+//3. -= operator
+let balance50 = 15000
+balance50 -= 2500
+console.log(balance50)
+
+//4. *= operator
+let balance22 = 2000
+balance22 *= 3
+console.log(balance22)
+
+let balance23 = 2000
+balance23 **= 3
+console.log(balance23)
+
+//5. /= operator
+
+let balance24 = 2000
+balance24 /= 3
+console.log(balance24)
+
+//6. modulus operator %=
+
+let balance25 = 2000
+balance25 %= 3
+console.log(balance25)
+
+// COMPARISON
+//1. less than <
+const ojoMoney = 2000
+const adeMoney = 3000
+let result = adeMoney < ojoMoney
+console.log(result) 
+
+//2. greater than >
+result = adeMoney > ojoMoney
+console.log(result)
+
+//3. greater than or equal to >=
+console.log(adeMoney >= ojoMoney)
+
+//4. less than or equal to <=
+console.log(adeMoney <= ojoMoney)
+
+//5. == operator
+
+const saheedMoney = 50000
+const ayMoney = '50000'
+
+console.log(saheedMoney == ayMoney)
+
+//6. strictly ===
+console.log(saheedMoney === ayMoney)
+
+// LOGICAL
+//1. && AND
+
+let xxx = 5
+let yyy = 8
+
+let z = xxx < 10 && yyy > 10
+console.log(z, "THE Z ANSWER")
+
+z = xxx < 10 && yyy < 10
+console.log(z, "THE Z ANSWER2")
+
+//2. || OR
+z = xxx < 10 || yyy > 10
+console.log(z, "THE Z ANSWER3")
+
+//3. ! not
+let www = 5
+let uuu = '5'
+z = !(www == uuu)
+console.log(z, "THE Z ANSWER4")
+
+
+
+// TERNARY / CONDITION
+
+//1. ? Question operator
+let saheedAge = 40
+let resultAge = saheedAge > 30 ? "Adult" : "Senior Man"
+console.log(resultAge)
+
+// 2. switch or case
+let paymentMethod = 'bank'
+
+switch (paymentMethod){
+    case  'wallet':
+        console.log("I ENTER  WALLET OOOO")
+        break;
+        case  'bank':
+            console.log("I ENTER BANK OOOO")
+            break;
+            case 'paypal':
+            console.log("I ENTER PAYPAL OOOO")
+            default:
+                console.log("nothing deyy alaye, enter better value")
+}
+
+//3. IF STATEMENTS
+let userAge = 50
+if(userAge > 30){
+    console.log(`you are arugbo ojo. you are ${userAge}`)
+}
+
+// 4. ELSE IF STATEMENT
+
+if (userAge > 50){
+    console.log(`you are arugbo ojo. you are ${userAge}`)
+} else if( userAge >= 20){
+    console.log(`you are Young Adult ${userAge}`)
+} else if(userAge != 30){
+    console.log(`you are ${userAge} years old. Entered userAge !=30`)
+} else {
+    console.log("Alaye don't disturb me ooo")
+}
+
+
+//5. IF ELSE STATEMENT
+if(userAge > 1000){
+    console.log(`you are arugbo ojo. you are ${userAge}`)
+} else {
+    console.log("Alaye don't disturb me ooo")
+}
+
+
+
+//....NEW TOPIC....
+// FUNCTIONS
+// 1. USING THE FUNCTION KEY WORD
+
+function myLove (loveName, age) {
+    console.log(`The name of my love is ${loveName}, she is ${age}`)
+}
+
+
+const getSum = (a, b) => {
+   const result = a + b - b * a / 10
+   console.log(result, "THE RESULT HERE")
+}
+
+const userDetails = userInfo => {
+    console.log(userInfo, "THE USER INFO PASSED")
+}
+
+
+myLove(`pelebe`, 50)
+myLove(`philoooooo`, 120)
+
+getSum(20, 10)
+getSum(2, 3)
+userDetails({
+    firstName: "sodiq",
+    lastName: 'ogbon'
+})
+
+function chaseOsb () {
+    return "OSB is disturbing us"
+}
+
+console.log(chaseOsb)
+
+//parameters allow you to pass (send) values to a function.
+//parameters() are listed inside the parenthesis in the function definition
+
+//parameters rules
+// - javascript function definitions do not specify data  types for parameters.
+//- parameters are the names listed in the function definition.
+// - Arguments are the real value passed to, and recieved by the functions
+
+function multiply(a, b) {
+    return a * b;
+}
+
+let ourResult = multiply(10,20)
+
+console.log(ourResult)
+
+// NOTE
+
+// The parameters: a and b
+// when you build (define) the function, you put placeholders inside the parenthesis.
+// these placeholders are the parameters
+
+//. The argument 4 and 5
+// when you actually use (call) the function, the real values you pass into those empty boxes are called arguments
+
+// 1. functions with one parameter
+function combine(surname){
+    return "Oluwaseun" + " " + surname;
+}
+
+let name = combine("Babatunde")
+console.log(name)
+
+// 2. function with multiple parameters
+function iseburuku(agbere, pansaga, freiburg){
+    return agbere + " " + pansaga + " " + freiburg
+}
+
+let oreMeta = iseburuku("olumide,", "oluwaseun popularly known as OSB,", "mr. faro")
+console.log(oreMeta)
+
+// RETURN STATEMENTS
+
+// what does return do
+//. when a function reaches a return statement, the function stops executing.
+//. the value after the ret  urn keyword is sent back to the caller.
+
+function sayHello(){
+    return "HELLO WORLD";
+}
+let message = sayHello()
+console.log(message)
+
+
+// Returning a calculated value with a return statement
+function calculation(c,d){
+    return c * d
+}
+let combinedCalcu = calculation(20, 9)
+console.log(combinedCalcu)
+
+//3. using return values in expressions
+
+function multiplication(r,m){
+    return r * m
+}
+let multiTable = multiplication(4,5) * 10;
+console.log(multiTable)
+
+// Returning values
+
+function fullName(firstName, lastName){
+    return firstName + " " + lastName
+}
+let nameCombinations = fullName("oluwaseun", "babatunde")
+console.log(nameCombinations)
+
+// Return statements stop execution
+
+function addition(b,c){   
+    return "Done";
+    return b + c;
+}
+let additionCombo = addition(20,30)
+console.log(additionCombo)
+
+//4. functions without returns
+// when a function does not return a value, then the return value is undefine
+function ashluxe(d,f){
+    let x = d * f;
+}
+let ashluxeFriend = ashluxe(4,3)
+console.log(ashluxeFriend)
+
+//5. Returning values early
+function checkAge(age){
+    if(age < 18){
+return "too young to watch this video"
+    }
+    return "Across Granted"
+}
+let checkAges = checkAge(16)
+console.log(checkAges)
+
+// function expression
+// a function expression is a function stored in a variable 
+
+//standard function
+function addition(a,b){
+    return a * b;
+}
+
+// expression function
+const multiplies = function(a,b){
+    return a * b
+}
+let multiplications = multiplies(3,5)
+console.log(multiplications)
+
+// function expressions use semicolons
+
+// A function expression is a javascript statement
+
+function addition(a,b){
+    return a * b;
+};
+
+// HOISTING
+//a function declaration that can be called before they are defined.
+// Differences between declarations and expressions
+//declarations start directly with function keyword while function expression starts by creating a variable (const or let)
+
+// the function declaration must be named while function expression
+// it is an anonymous function that must be stored inside a name variable
+
+// - the function  declarstion is fully hoisted i.e the computer move the whole machine  to the top of its memory while function
+// expression is not hoisted  i.e the computer knows the box exists but refuse to let it open early
+let sum = add(2,3)
+function add(a, b){
+    return a + b;
+}
+
+console.log(sum)
+
+//b. function expression are not hoisted in the same way as function declarations.
+console.log(adds(2,3));
+
+function adds(a,b) {
+    return a * b
+}
+
+//ARROW FUNCTION
+const addsMe = (a,b) =>{
+    return a * b
+}
+let myResult = addsMe(10,2)
+console.log(myResult)
+
+//GLOBAL SCOPE
+
+// scope determines the acessibility (visibility) of variables.
+
+// javascript variables have 3 types of scope
+
+// - Global scope
+// - Function scope
+// - block scope
+
+// - Global scope
+// variables declared Globally (outside any block or function) have Global scope.
+
+// Global variables can be accessed from anywhere in a javascript program.
+
+//  variables declared with var, let and const are quite similar when declared outside a block
+
+var sirfaroo = "igodaaro"
+
+function add(){
+    return "i love bottles especially" + " " + sirfaroo;
+}
+
+console.log(add())
+
+// LET
+
+let schoolName = "Aquinas College"
+
+function printWelcomeBanner(){
+    return "welcome sirfaroo to" + " " + "schoolName"
+}
+console.log(printWelcomeBanner())
+
+//CONST
+
+const currentPeriod = 1;
+
+function checkTime(){
+    return "Ring the bell, it is currently period" + " " + currentPeriod;
+};
+
+console.log(checkTime())
+
+// function scope
+// each javascript function have their own scope.
+
+
+// variable defined inside a function are not acessible (visible) from outside the function
+// variable declared with var, let and const are quite similar when declared inside a function
+
+function myfunction(){
+    let car = "volvo"
+    
+}
+
+
+function myfunction(){
+    const car = "mazda"
+    
+}
+
+// block scope
+// before ES6, javascript variables could only have global scope or function scope.
+
+// ES6 introduced two important new javascript keywords, let and const .
+
+// these two keywords provide block scope in javascript.
+
+// variable declared with let and const inside a code block 
+// are "block-scoped," meaning they are only acessible within that block
+
+{
+    let x = 5
+}
+
+
+{
+    const x = 3
+}
+
+// Lexical Scope
+
+let schoolNames = "tech academy";
+
+function outerRoom(){
+    let teacher = "mr. smith"
+
+    function innerRoom(){
+        let student = "Alice";
+
+        console.log(`${student} is taught by ${teacher} at ${schoolNames}`);
+    }
+
+    innerRoom();
+}
+
+outerRoom();
+
+//- PRATICE
+
+//1. the 'hype man' (zero parameter)
+
+// The goal: write a function that we can call anytime we need some motivation;
+// it dosen't need any inputs; it just need to return a positive message
+
+function motivations(){
+    return "we are doing awesome job learning to code!"
+
+}
+
+console.log(motivations())
+console.log(motivations())
+console.log(motivations())
+console.log(motivations())
+
+// Exercise 2: the pet greeter (one parameter)
+// The goal: write a function that takes the name of a pet and returns a customized greetings for them
+
+function greetpet(petName){
+    return `who is a good pet? you are ${petName}`
+}
+
+console.log(greetpet("Lullabi"))
+console.log(greetpet("gratefield"))
+console.log(greetpet("Lokili"))
+console.log(greetpet("bomosun"))
+console.log(greetpet("omo cohort"))
+
+// Exercise3. the area calculator(Two parameters)
+
+// The goal: imagine you are laying down carpet in different rooms of a house.
+// you need a function where you can plug in the length and the width
+// and it will return the total area.
+
+function calculatedArea(length, width){
+    let area = length * width;
+    return area
+};
+
+let bedroom = calculatedArea(10,10);
+let toilet = calculatedArea(2,4);
+let sittingRoom = calculatedArea(12,7);
+
+console.log(`Bedroom Area: ${bedroom} sq ft`);
+console.log(`Toilet Area: ${toilet} sq ft`);
+console.log(`sitting room  Area: ${sittingRoom} sq ft`);
+
+//Exercise 4: The weather Advisor (Adding logic)
+// the goal: create a reusable function that takes the current weather ("calm", "sun", "or", "snow") and
+// return advise on what to wear.
+
+function getWeatherAdvisor(weatherType){
+    if (weatherType === "rain"){
+        return "Bring an unbrella";
+    } else if (weatherType === "snow"){
+        return "Wear a Heavy Coat";
+    } else {
+        return "Enjoy your day"
+    }
+}
+console.log(getWeatherAdvisor("rain"))
+console.log(getWeatherAdvisor("snow"))
+console.log(getWeatherAdvisor("sun"))
+
+//Exercise 5 . The discount machine (Real World Reuseability)
+
+// The Goal: you are building a checkout system for a store.
+// you need a function that takes a price and applies a standard 
+// 20% discount to it, returning the final new price
+
+function applyDiscount(originalPrice){
+    let discountAmount = originalPrice * 0.20;
+
+    let finalPrice = originalPrice - discountAmount;
+
+    return finalPrice;
+}
+let shirtPrice = applyDiscount(25);
+let shoePrice = applyDiscount(60);
+
+console.log(`The shirt is now ${shirtPrice}`)
+console.log(`The shoe is now ${shoePrice}`)
+
+
+// Arrow functions conversions
+
+// traditional function
+
+//exercise 1
+function ringAlarm(){
+    return "Wake me up at 10am"
+}
+// arrow function conversion
+
+const ringAlarms = () => "Wake me up at 10am"
+console.log(ringAlarm())
+
+//exercise 2: The parrot (exactly one parameter)
+// Goal: A function that takes a woed and just repeat it back.
+
+// traditional function
+
+function repeatWord(word){
+    return `squak ! ${word}`
+}
+
+// Arrow conversion
+const repeatWords = word => `squak! ${word}`;
+
+console.log(repeatWords ("cracker"))
+
+
+
+
+
+// VARIABLES
+// camel
+const first_name = "My first name"
+
+// PASCAL
+const firrstName = "MY FIRST NAME 2"
+
+// SNAKE CASE
+const firstname = "MY FIRST NAME"

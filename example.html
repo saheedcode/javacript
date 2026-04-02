@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen bg-gray-100" id="pageBody">
+   
+    
+    <div id="contentCard" class="bg-white p-8 rounded-xl shadow-lg text-center transition-colors duration-500">
+        
+<h2 class="text-2xl font-bold mb-4 text-gray-900" id="statusText">Light Mode</h2>
+<button onclick="toggleTheme()" id="themeButton" class="bg-gray-800  text-white px-6 py-2 rounded-lg hover:opacity-80 transition">
+    Switch to Dark Mode
+</button>
+
+
+    </div>
+
+
+
+    <!--Second page-->
+
+
+<div class="bg-white p-8 rounded-xl shadow-lg max-w-md w-full">
+    <p class="text-xl font-bold text-red-600 mb-4 text-center">The scope Test</p>
+    <button onclick="runSecurityTest()" class="w-full  bg-red-500 text-white px-4 py-2 rounded mb-4">
+        Run Test
+    </button>
+
+
+<div class="bg-gray-50 p-4 rounded border">
+    <p class="mb-2"><strong>VAR Leak:</strong> <span id="varResult" class="text-red-500"> Waiting...</span></p>
+    <p class="mb-2"><strong>let Safe:</strong> <span id="letResult" class="text-green-500"> Waiting...</span></p>
+</div>
+
+</div>
+
+
+
+<script>
+//we will write a variable where we store our current state in a 'let' because it will be changing dynamically
+let currentTheme = "LIGHT"
+
+function toggleTheme(){
+//we grab all the html element we want to change
+const body = document.getElementById("pageBody");
+const card = document.getElementById("contentCard");
+const text = document.getElementById("statusText");
+const button = document.getElementById("themeButton");
+
+
+
+//we are current in light mode and want to switch everything to dark
+
+if(currentTheme === "LIGHT"){
+
+
+    // update the tracker variable
+    currentTheme = "DARK";
+    
+    //update the text on the screen 
+text.innerText = "Dark mode";
+text.innerText = "switch to light mode";
+
+//swap the tailwind color classes
+body.classList.replace("bg-gray-100", "bg-black");
+card.classList.replace("bg-white", "bg-gray-800");
+text.classList.replace("text-gray-900", "text-white");
+
+//invert the button colors
+
+button.classList.replace("bg-gray-800", "bg-gray-100");
+button.classList.replace("text-white", "text-gray-900");
+
+}
+else{
+
+  
+    // update the tracker variable
+    currentTheme = "LiGHT";
+    
+    //update the text on the screen 
+text.innerText = "LIGHT";
+text.innerText = "switch to light mode";
+
+//swap the tailwind color classes
+body.classList.replace("bg-black", "bg-gray-100");
+card.classList.replace("bg-gray-800bg-white", "bg-white");
+text.classList.replace("text-white", "text-gray-900");
+
+//invert the button colors
+
+button.classList.replace("bg-gray-100", "bg-gray-900",);  
+button.classList.replace("bg-gray-900", "text-white",); 
+}
+
+
+
+}
+
+
+
+
+function toggleTheme(){
+  const body = document.getElementById("pageBody");
+  const card = document.getElementById("contentCard");
+  const text = document.getElementById("statusText");
+  const button = document.getElementById("themeButton");
+
+  if(currentTheme === "LIGHT"){
+    currentTheme = "DARK";
+
+    // SAVE TO STORAGE
+    localStorage.setItem("theme", "DARK");
+
+    text.innerText = "Dark Mode";
+    button.innerText = "Switch to Light Mode";
+
+    body.classList.replace("bg-gray-100", "bg-black");
+    card.classList.replace("bg-white", "bg-gray-800");
+    text.classList.replace("text-gray-900", "text-white");
+
+    button.classList.replace("bg-gray-800", "bg-gray-100");
+    button.classList.replace("text-white", "text-gray-900");
+
+  } else {
+    currentTheme = "LIGHT";
+
+    // SAVE TO STORAGE
+    localStorage.setItem("theme", "LIGHT");
+
+    text.innerText = "Light Mode";
+    button.innerText = "Switch to Dark Mode";
+
+    body.classList.replace("bg-black", "bg-gray-100");
+    card.classList.replace("bg-gray-800", "bg-white");
+    text.classList.replace("text-white", "text-gray-900");
+
+    button.classList.replace("bg-gray-100", "bg-gray-800");
+    button.classList.replace("text-gray-900", "text-white");
+  }
+}
+
+
+
+
+//second page
+//differences between var and let 
+function runSecurityTest(){
+if(true){
+    var leakedPassword = "Password123#"
+    let safedPassword = "secret456";
+
+}
+
+//now, outside the if csslayerBlockRule,lets try those variable
+//1. Var which leaked out of the block! but the computer can still see it
+ document.getElementById("varResult").innerText = leakedPassword
+//2 let is a block-scoped i.e it is strapped in the If block
+
+try {
+    document.getElementById("letResult").innerText = safedPassword;
+
+}catch{
+    document.getElementById("letResult").innerText = "Error: variable is safe!";
+}
+
+}
+
+</script>
+
+
+</body>
+</html>
